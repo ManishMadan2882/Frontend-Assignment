@@ -14,8 +14,8 @@ To install this project, follow these steps:
 
 * Clone the repository to your local machine.
 * Open the project directory in a terminal window.
-* Run npm install to install the dependencies.
-* Run npm start to start the development server.
+* Run "npm install" to install the dependencies.
+* Run "npm start" to start the development server.
 * Open a web browser and navigate to http://localhost:3000.
 
 # Usage
@@ -31,8 +31,8 @@ To use the application, follow these steps:
 The project is organized into the following directories:
 
 ### src/: Contains the source code for the React.js application.
-#### actions/: Contains Redux action creators. 
-#### components/: Contains React components for rendering the UI.
-#### store/: Contains the Redux store configuration & slice/reducers.
+ * actions/: Contains Redux action creators. 
+ * components/: Contains React components for rendering the UI.
+ * store/: Contains the Redux store configuration & slice/reducers.
 ### App.js: The main React component for the application.
 ### index.js: The entry point for the application.
