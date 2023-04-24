@@ -6,3 +6,4 @@ const store= configureStore({
     }
 });
 export default store;
+//This module exports the Redux Store

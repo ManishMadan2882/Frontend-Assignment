@@ -16,23 +16,27 @@ function App() {
 }
   
   const handleChange = (e)=>{
+    
     setText(e.target.value)
  
   }
   const updateSchema = ()=>{
+    if(text === '')
+    setSchema('[]')
       if(isJsonString(text))
-      setSchema(text)
+      {setSchema(text)}
   }
   useEffect(()=>{updateSchema()})
   return (
     <div className='flex justify-around  flex-wrap'>
-        <div className='w-[50%]   h-screen   border-gray-500 p-4 '>
-          <h1 className='text-center mb-2 border-b-violet-800 border-b-2'>UI Schema</h1>
-          <label className='block'>JSON Schema</label>
-          <textarea value={text} onChange={(e)=>{handleChange(e)}} className='font-custom bg-slate-50 p-2 w-[95%] h-[90%] mt-2 border-slate-600 border' name="uischema" rows="16" cols="45" >
+        <div className='w-[50%]  h-[100%]  p-4 '>
+          <h1 className='text-center  border-b-2 border-violet-700 mb-2 '>UI Schema</h1>
+          <label className='block'>Enter Schema as per the syntax</label>
+          <textarea value={text} onChange={(e)=>{handleChange(e)}} className='font-custom bg-slate-50 p-2 w-[95%] h-[90%] mt-2 border-slate-600 border shadow-sm shadow-purple-600' name="uischema" rows="23" cols="45" >
           </textarea>
         </div>
-        <div className= 'w-[50%]  border-2 border-gray-500 p-4'>
+       
+        <div className= 'w-[50%] border-l-violet-800 border-l-2 p-4'>
           <h1 className='text-center border-b-violet-600 border-b-2'>Preview</h1>
          
           

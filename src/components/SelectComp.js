@@ -10,19 +10,19 @@ const SelectComp = (props) => {
     const [input,setInput] = useState(props.menu.defaultValue)
     const dispatch =  useDispatch()
     useEffect(()=>{
-        console.log(props.jsonKey,input);
         dispatch(update({
             jsonKey  : props.jsonKey
-            ,value:input
+            ,value:input,
+            parent:props.parent
         })) 
        })
     const handleChange = (e)=>{
         setInput(e.target.value)
     }
   return (
-    <div className='flex justify-between border p-2'>
+    <div className='flex m-1 justify-between'>
     <div>
-        <label className='text-lg'>{props.label}</label>
+        <label className='text-md'>{props.label}</label>
         {(props.description.length > 0 ) && <Tooltip  title={props.description} >
           <IconButton >
             <InfoIcon className='w-[5px]' variant="outlined"/>
