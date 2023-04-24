@@ -11,7 +11,7 @@ import { Switch } from '@material-ui/core'
 import { Button } from '@mui/material'
 import { useState } from 'react'
 const PreviewForm = (props) => {
-    const [advanced,setAdvanced] = useState(true)
+    const [advanced,setAdvanced] = useState(false)
     const [cancel,setCancel] = useState(false)
     const dispatch = useDispatch()
     const handleToggle = ()=>{

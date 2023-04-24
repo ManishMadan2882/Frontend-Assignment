@@ -30,6 +30,7 @@ const formSlice = createSlice({
         submitState(state,action)
         {
             //this action will send the JSON Form Data via Backend API
+           
             let api = prompt("Enter the backend API", "https://example.com/api");
             fetch(api, {
                 method: 'POST',

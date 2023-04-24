@@ -7,7 +7,7 @@ import SwitchComp from './SwitchComp';
 import { Switch } from '@material-ui/core';
 import SelectComp from './SelectComp';
 export default function GroupComp(props) {
-    const [advanced,setAdvanced] = useState(true)
+    const [advanced,setAdvanced] = useState(false)
     const handleToggle = ()=>{
         setAdvanced(!advanced)
       }
